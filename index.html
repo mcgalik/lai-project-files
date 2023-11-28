@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="sba.css">
+	<title>Welcome to TSSS Basketball Club</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+	<!--formatting-->
+	
+	<style>
+			body {
+				font-family: Arial, Helvetica, sans-serif; margin: 0;
+			}
+
+
+			h3 {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size:12px;
+				font-style:normal;
+				font-weight:normal;
+			}	
+	</style>
+
+	<!-- Login box code -->
+	<style>
+	/* Button used to open the contact form - fixed at the top of the page */
+	.open-button {
+	  background-color: #555;
+	  color: white;
+	  padding: 16px 20px;
+	  border: none;
+	  cursor: pointer;
+	  opacity: 0.8;
+	  position: fixed;
+	  top: 13px;
+	  right: 28px;
+	  width: 280px;
+	}
+
+	/* The popup form - hidden by default */
+	.form-popup {
+	  display: none;
+	  position: fixed;
+	  top: 0;
+	  right: 15px;
+	  border: 3px solid #f1f1f1;
+	  z-index: 9;
+	}
+
+	/* Add styles to the form container */
+	.form-container {
+	  max-width: 300px;
+	  padding: 10px;
+	  background-color: white;
+	}
+
+	/* Full-width input fields */
+	.form-container input[type=text], .form-container input[type=password] {
+	  width: 100%;
+	  padding: 15px;
+	  margin: 5px 0 22px 0;
+	  border: none;
+	  background: #f1f1f1;
+	}
+
+	/* When the inputs get focus, do something */
+	.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+	  background-color: #ddd;
+	  outline: none;
+	}
+
+	/* Set a style for the submit/login button */
+	.form-container .btn {
+	  background-color: #04AA6D;
+	  color: white;
+	  padding: 16px 20px;
+	  border: none;
+	  cursor: pointer;
+	  width: 100%;
+	  margin-bottom:10px;
+	  opacity: 0.8;
+	}
+
+	/* Add a red background color to the cancel button */
+	.form-container .cancel {
+	  background-color: red;
+	}
+
+	/* Add some hover effects to buttons */
+	.form-container .btn:hover, .open-button:hover {
+	  opacity: 1;
+	}
+	</style>
+
+	<!-- Navbar code-->
+	<style>
+			ul.topnav {
+			  list-style-type: none;
+			  margin: 0;
+			  padding: 0;
+			  overflow: hidden;
+			  background-color: #333;
+			}
+
+			ul.topnav li {float: left;}
+
+			ul.topnav li a, .dropbtn {
+			  display: block;
+			  color: white;
+			  text-align: center;
+			  padding: 14px 16px;
+			  text-decoration: none;
+			}
+
+			ul.topnav li a:hover:not(.active), .dropdown:hover .dropbtn {background-color: #111;}
+
+			ul.topnav li a.active {background-color: orange;color:black;}
+
+			ul.topnav li.right {float: right;}
+
+			ul.topnav li.dropdown {
+			  display: block;
+			}
+
+			.dropdown-content {
+			  display: none;
+			  position: absolute;
+			  background-color: #000000;
+ 			 min-width: 160px;
+ 			 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ 			 z-index: 1;
+			}
+
+
+
+			.dropdown-content a {
+			  color: black;
+			  padding: 12px 16px;
+			  text-decoration: none;
+			  display: block;
+			  text-align: left;
+			}
+
+			.dropdown-content a:hover {background-color: #f1f1f1;}
+
+			.dropdown:hover .dropdown-content {
+			  display: block;
+			}
+
+			@media screen and (max-width: 600px) {
+			  ul.topnav li.right, 
+			  ul.topnav li.dropdown,
+			  ul.topnav li ,
+			  .dropdown-content a{float: none;}
+			}
+	</style>
+
+	<!-- Persistant header code -->
+	<style type="text/css">
+		.top-container {
+		  background-color: #f1f1f1;
+		  padding: 0px;
+		  text-align: center;
+		}
+
+		.header {
+		  padding: 10px 16px;
+		  background: rgba(85, 85, 85, 0.9);
+		  color: #f1f1f1;
+		}
+
+		.content {
+		  padding-left: 16px;
+		  padding-right: 16px;
+		  max-width: 1280px;
+		  margin: 0 auto;
+		  float: none;
+		}
+
+		.sticky {
+		  position: fixed;
+		  top: 0;
+		  width: 100%;
+		}
+
+		.sticky + .content {
+		  padding-top: 100px;
+		}
+	</style>
+
+	
+</head>
+<header>
+	<div class="top-container">
+	  <a href="https://www.tsss.edu.hk/"><img src="https://www.tsss.edu.hk/images/banner1.png" width="100%"></a>
+	</div>
+
+</header>
+
+<body style="background-color:#e6e6e6;">
+    
+  
+
+	<!-- Header -->
+	<div class="header" id="topHeader">
+	  <table style="padding-top:50px;padding-bottom:30px;">
+			<tr>
+				<td rowspan="2">
+					<img src="https://www.iconsdb.com/icons/preview/white/basketball-xxl.png" height="70" width="70">
+				</td>
+				<td style="height:100%;text-align:left;vertical-align:bottom;padding:0;font-size:48px;font-weight:semi-bold;padding:0;">
+					Tak Sun Basketball Club
+				</td>
+			</tr>
+			<tr>
+				<td style="height:100%;text-align:left;vertical-align:top;padding:0;font-size:16px;font-weight:normal;">
+					come to join us!
+				</td>
+			</tr>
+	  </table>
+
+		<!-- Login form -->
+		<button class="open-button" onclick="openForm()">Login</button>
+
+		<div class="form-popup" id="loginForm">
+		  <form action="login-landing-page-temp.php" class="form-container">
+		    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>	    
+
+		    <h1 style="color:black;">Login</h1>
+
+		    <label for="email"><b style="color:black;">Email</b></label>
+		    <input type="text" placeholder="Enter Email" name="email" required>
+
+		    <label for="psw"><b style="color:black;">Password</b></label>	
+		    <input type="password" placeholder="Enter Password" name="psw" required>
+
+		    <button type="submit" class="btn">Login</button>
+		    <br><h3 style="color:lightgray;">Warnig: This form is a demonstrator and currently does not work</h3>
+
+		  </form>
+		</div>
+
+	  <!-- Navbar -->
+		<ul class="topnav">
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="basketball-intro.html">Intro to Basketball</a></li>
+      <li class="dropdown">
+        <a href="news.html" class="dropbtn">News</a>
+        <div class="dropdown-content">
+          <a href="news.html#events">Events</a>
+          <a href="news.html#media">Media</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="about-us.html" class="dropbtn">About Us</a>
+        <div class="dropdown-content">
+          <a href="about-us.html#ourmember">Our Member</a>
+          <a href="about-us.html#ourschool">Our School</a>
+          <a href="contact.html#">Contact</a>
+        </div>
+      </li>
+      <li class="right"><a href="join.html">Join us</a></li>
+    </ul>
+	</div>
+	<!-- End of Header -->
+
+	<div class="content">
+
+	<div style="padding:0;">
+		<table>
+			<tr >
+				<td style="min-width:500px"><p><h1 style="padding:0 16px">Welcome to Tak Sun Basketball Club!</h1></p></td>
+				<td style="min-width:500px"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Tak_Sun_Secondary_School_inter-class_basketball_match_2014.jpg/640px-Tak_Sun_Secondary_School_inter-class_basketball_match_2014.jpg" style="padding:0"></td>
+			</tr>
+		</table>
+		
+	</div>
+
+	<!-- Calender -->
+	<div style="padding:1px 16px;background-color:#333;">
+		<h2><p><font COLOR="white">Upcoming Events</font></p></h2>
+	</div>	
+
+	<style>
+		* {box-sizing: border-box;}
+		ul {list-style-type: none;}
+
+
+		.calender {
+			max-width: 500px;
+			margin: auto;
+		}
+
+		.month {
+		  padding: 70px 25px;
+		  width: 100%;
+		  background: orange;
+		  text-align: center;
+		}
+
+		.month ul {
+		  margin: 0;
+		  padding: 0;
+		}
+
+		.month ul li {
+		  color: white;
+		  font-size: 20px;
+		  text-transform: uppercase;
+		  letter-spacing: 3px;
+		}
+
+		.month .prev {
+		  float: left;
+		  padding-top: 10px;
+		}
+
+		.month .next {
+		  float: right;
+		  padding-top: 10px;
+		}
+
+		.weekdays {
+		  margin: 0;
+		  padding: 10px 0;
+		  background-color: #ddd;
+		}
+
+		.weekdays li {
+		  display: inline-block;
+		  width: 13.6%;
+		  color: #666;
+		  text-align: center;
+		}
+
+		.days {
+		  padding: 10px 0;
+		  background: #eee;
+		  margin: 0;
+		}
+
+		.days li {
+		  list-style-type: none;
+		  display: inline-block;
+		  width: 13.6%;
+		  text-align: center;
+		  margin-bottom: 5px;
+		  font-size:12px;
+		  color: #777;
+		}
+
+		.days li .active {
+		  padding: 5px;
+		  background: orange;
+		  color: white !important
+		}
+
+		/* Add media queries for smaller screens */
+		@media screen and (max-width:720px) {
+		  .weekdays li, .days li {width: 13.1%;}
+		}
+
+		@media screen and (max-width: 420px) {
+		  .weekdays li, .days li {width: 12.5%;}
+		  .days li .active {padding: 2px;}
+		}
+
+		@media screen and (max-width: 290px) {
+		  .weekdays li, .days li {width: 12.2%;}
+		}
+	</style>
+	<table>
+		<tr>
+			<th style="width:30%; min-width:300px;">
+				<div class="calneder">
+					<div class="month">      
+					  <ul>
+					    <li class="prev">&#10094;</li>
+					    <li class="next">&#10095;</li>
+					    <li>
+					      <br>January
+					      <span style="font-size:18px">2023</span>
+					    </li>
+					  </ul>
+					</div>
+					<ul class="weekdays">
+					  <li>Mon</li>
+					  <li>Tue</li>
+					  <li>Wed</li>
+					  <li>Thu</li>
+					  <li>Fri</li>
+					  <li>Sat</li>
+					  <li>Sun</li>
+					</ul>
+
+					<ul class="days">  
+					  <li>1</li>
+					  <li>2</li>
+					  <li>3</li>
+					  <li>4</li>
+					  <li>5</li>
+					  <li>6</li>
+					  <li>7</li>
+					  <li>8</li>
+					  <li>9</li>
+					  <li><span class="active">10</span></li>
+					  <li>11</li>
+					  <li>12</li>
+					  <li>13</li>
+					  <li>14</li>
+					  <li>15</li>
+					  <li>16</li>
+					  <li>17</li>
+					  <li>18</li>
+					  <li>19</li>
+					  <li>20</li>
+					  <li>21</li>
+					  <li>22</li>
+					  <li>23</li>
+					  <li>24</li>
+					  <li>25</li>
+					  <li>26</li>
+					  <li>27</li>
+					  <li>28</li>
+					  <li>29</li>
+					  <li>30</li>
+					  <li>31</li>
+					</ul>
+				</div>
+			</th>
+			<th style="width:2%"></th>
+			<th style="width:48%" align="right">
+				Today is 10th January 2023<br>
+				We will have a exercise session on <i>Friday, 12th January 2023 5:00 p.m.</i> after school<br>
+				Location: Basketball Court
+			</th>
+		</tr>
+	</table>
+	<!-- End of Calender -->
+
+	<hr>
+	<div style="padding:1px 16px;background-color:#333;">
+		<h2><p><font COLOR="white">News</font></p></h2>
+	</div>
+	<div style="padding:0 16px;">
+		<table>
+		  <tr>
+		  	<td style="width:50%;min-width:300px;padding:30px;" rowspan="2">
+		  		<p>
+						Oriental Daily has published an article in new schools that are rising up to challenge the traditional leaders in inter-school. Team player, Victor Tse explains how this has come about:
+					</p>
+					<p>
+						新勢力分途出擊
+					</p>
+					<p>
+						今年學界賽有不少新勢力崛起，其中北角協同中學和德信中學均創造校史，首次登上精英賽舞台，兩軍最終殺入8強，成績有目共睹。
+							北協和德信於Panasonic學界籃球邀請賽分別處於B組和D組，各自與學界勁旅聖若瑟書院和拔萃男書院等爭出線，誓要延續「夢幻之旅」。
+					</p>
+					<p>
+						德信中學團結創傳奇
+					</p>
+					<p>
+						疫情後，學界形勢大洗牌，德信中學是其中一間竄起的學校，以沙西區亞軍之姿，首闖精英賽即殺入8強，締造歷史。謝志鵬（Vic）直言球隊往年成績平平，轉變全因一個人——甲一MVP蔡再懃。「教練安排了大量團隊戰術，把團隊意識植入我們腦袋，教會我們打一條Team，而非一個人的籃球。」
+					</p>
+					<p>
+						德信資料表上，球員偶像皆是蔡再懃，目標同為「團隊至上（WE＞ME）」，有趣的是，這群男生還剷了清一色的平頭。Vic笑說：「有幾個人剷先，其他人覺得OK，幾型喎，便一起剷。我們一向這樣，吵吵鬧鬧，氣氛很好。」
+					</p>
+					<p>
+						締造歷史的下一步，是延續歷史，甚至創新高峰。德信劍指Panasonic 4強，並點名希望對上喇沙書院：「我們檢討過精英賽8強不敵喇沙，發現大家心理質素麻麻，面對逆境波，很容易亂了方寸，失去團隊合作。很想打一場好球，呈現德信團隊籃球的特色，贏回他們。」
+					</p>
+		  	</td>
+		  	<td style="width:20%">
+		  		<div class="btncontainer" style="vertical-align:bottom;">
+		  			<img src="https://www.tsss.edu.hk/photovideo/schoolalbum/20230420BB/pic01.jpg" alt="Image 1">
+		 				<button class="btnimg">Learn More</button>
+					</div>
+		  	</td>
+		  </tr>
+		  <tr><td><img src="https://www.tsss.edu.hk/photovideo/schoolalbum/20230420BB/pic02.jpg" alt="Image 2" style="width:100%"></td></tr>
+		 </table>
+		 		
+	</div>
+	
+	<hr>
+
+	<div style="padding:1px 16px;background-color:#333;">
+		<h2><p><font COLOR="white">Media</font></p></h2>
+	</div>
+
+	<center>
+	<iframe width="100%" height="500" src="https://www.youtube.com/embed/s_xDqchNoyk?si=avRURIkPWRXrBvJO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<br>
+	<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FuTOPiaTSSS1314%2Fposts%2F661031617302016&show_text=true&width=500" width="500" height="181" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe><br>
+  <button style="background-color:orange; border-color:orange; color:black">Learn More</button>
+  <br>
+	</center>
+
+
+      <!--Style for buttons-->
+	<style>
+		button {
+		  background-color: #04AA6D;
+		  color: white;
+		  padding: 14px 20px;
+		  margin: 8px 0;
+		  border: none;
+		  border-radius: 8px;
+		  cursor: pointer;
+		  width: 300px;
+		  transition-duration: 0.4s;
+		}
+
+		button:hover {
+		  opacity: 0.8;
+		  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+		}
+
+		.disabled {
+		  opacity: 0.6;
+		  cursor: not-allowed;
+		}
+	</style>
+  <!-- End of Style for buttons-->
+	
+	<!--Style for button on img-->
+	<style>
+		.btncontainer {
+		  position: relative;
+		  width: 100%;
+		}
+
+		.btncontainer img {
+		  width: 100%;
+		  height: auto;
+		}
+
+		.btncontainer .btnimg {
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  -ms-transform: translate(-50%, -50%);
+		  background-color: #f1f1f1;
+		  color: black;
+		  font-size: 16px;
+		  padding: 16px 30px;
+		  border: none;
+		  cursor: pointer;
+		  border-radius: 5px;
+		  text-align: center;
+		}
+
+		.btncontainer .btnimg:hover {
+		  background-color: black;
+		  color: white;
+		}
+	</style>
+  <!-- End of Style for button on img-->
+
+	<!-- Return to top button-->
+	<button onclick="topFunction()" id="topbtn" title="Go to top">Back to top</button>
+	<style type="text/css">
+		#topbtn {
+		  display: none;
+		  position: fixed;
+		  bottom: 20px;
+		  right: 30px;
+		  z-index: 99;
+		  border: none;
+		  outline: none;
+		  background-color: orange;
+		  color: black;
+		  cursor: pointer;
+		  padding: 15px;
+		  border-radius: 10px;
+		  font-size: 18px;
+		}
+
+		#topbtn:hover {
+		  opacity: 0.8;
+		  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+		}
+	</style>
+	
+	<!-- End of return to top button-->
+	</div>
+
+	<!-- JS code -->
+	<script type="text/javascript">
+		// Get the value from div:
+		var topbutton = document.getElementById("topbtn");
+		var header = document.getElementById("topHeader");
+		var sticky = header.offsetTop;
+
+		// scroll detect
+		window.onscroll = function() {headerFunction()};
+
+		// sticky header
+		function headerFunction() {
+		  if (window.pageYOffset > sticky) {
+		    header.classList.add("sticky");
+				topbutton.style.display = "block";
+		  } else {
+		    header.classList.remove("sticky");
+		    topbutton.style.display = "none";
+		  }
+		}
+
+		// return to top button
+		function topFunction() {
+		  document.body.scrollTop = 0; // For Safari
+		  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+		}
+
+		// login form open&close function
+		function openForm() {
+  		document.getElementById("loginForm").style.display = "block";
+		}
+
+		function closeForm() {
+		  document.getElementById("loginForm").style.display = "none";
+		}
+
+	</script>
+	<!-- End of JS code -->
+
+	<br>
+	<div style="background: #555;color: #f1f1f1;padding:1px;">
+	<h3>
+		<p>Thank you for visiting our site.<br>
+		This website is made by Yong Chung Lai. All rights reserved</p>
+		<p>If you have found any issues, please contact us with following methods<br>
+			<a href="mailto:s181150@tsss.edu.hk" style="color:white;text-decoration:none;"><img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/mail-256.png" width="12" height="12">Gmail: s181150@tsss.edu.hk</a> <br> 
+			<img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/phone-256.png" width="12" height="12">TEL: 23174339</p>
+	</h3>
+	</div>
+</body>
+</html>
